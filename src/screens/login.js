@@ -18,7 +18,6 @@ export default function Login() {
           Never Forget Your Password
         </Text>
       </View>
-
       <View style={{ margin: 35 }}>
 
        <Input
@@ -29,9 +28,15 @@ export default function Login() {
        />
 
       <Button title={"Log in"} customStyles={{marginTop:25,alignSelf:'center'}}/>
-
-        
+  
       </View>
+      <View>
+        <Text style={{textAlign:'center'}}>
+            Dont Have an Account?<Text style={{color:'blue'}}>Sign Up</Text>
+        </Text>
+      </View>
+
+
     </SafeAreaView>
   );
 }
