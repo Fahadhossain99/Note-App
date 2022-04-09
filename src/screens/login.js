@@ -1,6 +1,8 @@
 import { View, Text,Image,TextInput,StyleSheet } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import Input from '../components/Input';
+import Button from '../components/Button';
 
 
 
@@ -18,7 +20,16 @@ export default function Login() {
       </View>
 
       <View style={{ margin: 35 }}>
-        <TextInput style={styles.input} placeholder="Email" />
+
+       <Input
+         placeholder="Email"
+       />
+       <Input
+         placeholder="Password"
+       />
+
+      <Button title={"Log in"} customStyles={{marginTop:25,alignSelf:'center'}}/>
+
         
       </View>
     </SafeAreaView>
