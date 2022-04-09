@@ -1,8 +1,8 @@
 import { View, Text,Image,TextInput,StyleSheet,TouchableOpacity } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import Input from '../components/Input';
-import Button from '../components/Button';
+import Input from '../components/input';
+import Button from '../components/button';
 
 
 
