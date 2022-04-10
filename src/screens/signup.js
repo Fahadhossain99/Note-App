@@ -18,7 +18,7 @@ export default function Signup() {
     <SafeAreaView>
       <View style={{ margin: 25 }}>
         <Input placeholder={"Email"} OnChangeText={(text) => setEmail(text)} />
-        <Input placeholder={"Password"} OnChangeText={(text) => setPassword(text)} />
+        <Input placeholder={"Password"} OnChangeText={(text) => setPassword(text)} secureTextEntry={true}  />
         <Input placeholder={"Full Name"} OnChangeText={(text) => setName(text)} />
         <Input placeholder={"Age"} OnChangeText={(text) => setAge(text)} />
 
