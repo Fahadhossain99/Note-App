@@ -1,16 +1,17 @@
-import { View, Text,StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import React from 'react'
 
-export default function RadioInput({label}) {
+export default function RadioInput({label,value,setValue}) {
+    const isSelected = value === label;
   return (
-    <View>
+    <TouchableOpacity onPress={() => setValue(label)}>
       <View  style={styles.container}>
-        <View style={styles.outerCircle } >
-          <View style={ styles.innerCircle  }/>
+        <View style={[styles.outerCircle,isSelected && styles.selectedOuterCircle]} >
+          <View style={ [styles.innerCircle,isSelected && styles.selectedInnerCircle ]}/>
         </View>
         <Text style={{ marginLeft: 10, fontWeight: "bold" }}>{label}</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
@@ -37,4 +38,12 @@ const styles = StyleSheet.create({
               borderColor: "#ccc",
               
   },
+  selectedOuterCircle:{
+              borderColor:'#D87D4A'
+  },
+  selectedInnerCircle:{
+         borderColor:'#D87D4A',
+         backgroundColor:'#D87D4A'    
+  },
+
 });
