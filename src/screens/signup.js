@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import Input from '../components/input';
 import RadioInput from '../components/radio-input';
 import Button from '../components/button';
-// import { firebase } from '../config';  
+import { firebase } from '../config';  
 
 const OPTIONS=["Male","Female","Others"]
 
@@ -14,6 +14,21 @@ export default function Signup() {
   const [password,setPassword]=React.useState('')
   const [name,setName]=React.useState('')
   const [age,setAge]=React.useState('')
+  const [loading,setLoading]=React.useState(false)
+
+
+  // const signup = () => {
+  //   //1.validate the form
+
+  //   //2. loading to true
+  //   setLoading(true)
+
+  //   //3. create user in firebase
+
+  //   // 4. add user profile
+
+  //   //5. loading to false + validate
+  // }
   
   return (
     <SafeAreaView>
@@ -37,6 +52,7 @@ export default function Signup() {
         <Button
           title={"Submit"}
           customStyles={{ marginTop: 25, alignSelf: "center" }}
+          
         />
       </View>
     </SafeAreaView>
