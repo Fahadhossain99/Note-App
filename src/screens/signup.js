@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import Input from '../components/input';
 import RadioInput from '../components/radio-input';
 import Button from '../components/button';
-// import { firebase } from '../config';
+// import { firebase } from '../config';  
 
 const OPTIONS=["Male","Female","Others"]
 
