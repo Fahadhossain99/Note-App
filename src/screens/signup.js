@@ -5,6 +5,7 @@ import Input from '../components/input';
 import RadioInput from '../components/radio-input';
 import Button from '../components/button';
 import { firebase } from '../config';  
+import { ActivityIndicator } from 'react-native';
 
 const OPTIONS=["Male","Female","Others"]
 
@@ -18,25 +19,32 @@ export default function Signup() {
 
 
   // const signup = () => {
-  //   //1.validate the form
-
-  //   //2. loading to true
+ 
   //   setLoading(true)
 
-  //   //3. create user in firebase
+    
+  //   firebase
+  //     .auth()
+  //     .createUserWithEmailAndPassword(email,password)
+  //     .then((response) => {
+  //       console.log("RESPONSE --",response)
+  //       setLoading(false)
 
-  //   // 4. add user profile
-
-  //   //5. loading to false + validate
+  //     }).catch((error) => {
+  //       setLoading(false)
+  //       console.log('error',error)
+  //     }
+  //     )
+    
   // }
   
   return (
     <SafeAreaView>
       <View style={{ margin: 25 }}>
-        <Input placeholder={"Email"} OnChangeText={(text) => setEmail(text)} />
-        <Input placeholder={"Password"} OnChangeText={(text) => setPassword(text)} secureTextEntry={true}  />
-        <Input placeholder={"Full Name"} OnChangeText={(text) => setName(text)} />
-        <Input placeholder={"Age"} OnChangeText={(text) => setAge(text)} />
+        <Input placeholder="Email" OnChangeText={(text) => setEmail(text)} />
+        <Input placeholder="Password" OnChangeText={(text) => setPassword(text)} secureTextEntry={true}  />
+        <Input placeholder="Full Name" OnChangeText={(text) => setName(text)} />
+        <Input placeholder="Age" OnChangeText={(text) => setAge(text)} />
 
         <View style={{ marginTop: 20 }}>
           <Text style={{ marginBottom: 15 }}>Select Your Gender</Text>
@@ -49,11 +57,16 @@ export default function Signup() {
             />
           ))}
         </View>
+        {/* {loading ? 
+        <ActivityIndicator/>
+        : */}
         <Button
           title={"Submit"}
           customStyles={{ marginTop: 25, alignSelf: "center" }}
-          
+          // onPress={signup}
         />
+        {/* } */}
+        
       </View>
     </SafeAreaView>
   );

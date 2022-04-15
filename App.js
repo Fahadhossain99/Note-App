@@ -22,7 +22,7 @@ const AppTheme = {
 const Stack = createNativeStackNavigator();
 
 function App() {
-  const [user,setuser]=React.useState(false);
+  const [user,setUser]=React.useState(false);
   return (
     <NavigationContainer theme={AppTheme}>
       <Stack.Navigator>
